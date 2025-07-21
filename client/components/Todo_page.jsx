@@ -140,7 +140,7 @@ useEffect(() => {
    
     if (task.trim()) {
         //sending data to backened
-     const response = await fetch('http://localhost:8000/send_inputData', {
+     const response = await fetch('https://todo-backened-zal3.onrender.com/send_inputData', {
         method: 'POST',               // POST request
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({task}) , // send JSON data
@@ -161,7 +161,7 @@ useEffect(() => {
   };
 
   const handleDeleteTask = async(index) => {
- const response = await fetch('http://localhost:8000/deleteTask', {
+ const response = await fetch('https://todo-backened-zal3.onrender.com/deleteTask', {
         method: 'POST',               // POST request
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({index}) , // send JSON data
