@@ -9,7 +9,7 @@ const LogoutPage = () => {
 
   const handleSubmit = () => {
     
-    fetch('http://localhost:8000/log-out', {
+    fetch('https://todo-backened-zal3.onrender.com/log-out', {
       method: 'GET',
       credentials: 'include',
     }).then((data) => {
