@@ -24,7 +24,7 @@ const LoginPage = () => {
       console.log('Attempt login with:', { username, password });
       // Add backend call here later
     }
-     const response = await fetch('http://localhost:8000/login', {
+     const response = await fetch('https://todo-backened-zal3.onrender.com/login', {
         method: 'POST',               // POST request
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({username:username,password:password,}) , // send JSON data
