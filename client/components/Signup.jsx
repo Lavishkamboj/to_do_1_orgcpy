@@ -31,7 +31,7 @@ const SignupPage = () => {
       setError('');
       console.log('Signup data:', form);
       // Hook up to backend API here
-      const response = await fetch('http://localhost:8000/signup', {
+      const response = await fetch('https://todo-backened-zal3.onrender.com/signup', {
          method: 'POST',               // POST request
          headers: { 'Content-Type': 'application/json' },
          body: JSON.stringify({username:form.name,password:form.password,}) , // send JSON data
