@@ -16,7 +16,7 @@ const TodoPage = () => {
 useEffect(() => {
   const check_data = async () => {
     try {
-      const user_data = await fetch('http://localhost:8000/getUserData',{
+      const user_data = await fetch('https://todo-backened-zal3.onrender.com/getUserData',{
           method: 'GET',
   credentials: 'include',
       });
