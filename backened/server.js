@@ -82,12 +82,11 @@ res.status(200).json(user_data)
 })
 app.get('/log-out', (req, res) => {
   res.clearCookie('token', {
-  httpOnly: false,
+  httpOnly: true,
   secure: true,
   sameSite: 'lax',
     path: '/',
 });
-   res.setHeader('Set-Cookie', 'token=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0');
 res.json({ message: 'Logged out successfully' });
 });
 
@@ -119,9 +118,9 @@ console.log("token-"+token)
 
 //cookie
 res.cookie('token', token, {
-  httpOnly: false,         // allow JS to access (optional)
+  httpOnly: true,         // allow JS to access (optional)
   secure: true,           // must be true if you're on HTTPS
-  sameSite: 'lax',         // controls cross-origin cookie behavior
+  sameSite: 'none',         // controls cross-origin cookie behavior
   path: '/',               // cookie available to all paths
   maxAge: 86400000         // 1 day
 });
@@ -166,9 +165,9 @@ console.log("token-"+token)
 
 //cookie
 res.cookie('token', token, {
-  httpOnly: false,         // allow JS to access (optional)
+  httpOnly: true,         // allow JS to access (optional)
   secure: true,           // must be true if you're on HTTPS
-  sameSite: 'lax',         // controls cross-origin cookie behavior
+  sameSite: 'none',         // controls cross-origin cookie behavior
   path: '/',               // cookie available to all paths
   maxAge: 86400000         // 1 day
 });
