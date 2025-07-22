@@ -37,7 +37,7 @@ app.post('/send_inputData',async(req,res)=>{
     }
   
     try {
-      const decoded = jwt.verify(token, process.env.jwt_secret);
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
       req.user = decoded; // make user info available in req
       user_name=req.user.user;
       console.log(user_name)
@@ -69,7 +69,7 @@ const token = req.cookies.token;
     }
   
     try {
-      const decoded = jwt.verify(token, process.env.jwt_secret);
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
       req.user = decoded; // make user info available in req
       user_name=req.user.user;
       console.log(user_name)
