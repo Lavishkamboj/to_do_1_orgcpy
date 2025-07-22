@@ -7,9 +7,9 @@ const LogoutPage = () => {
   const [hover, setHover] = useState(false);
   const { setUser, loading } = useContext(AuthContext);
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     
-    fetch('https://todo-backened-zal3.onrender.com/log-out', {
+    await fetch('https://todo-backened-zal3.onrender.com/log-out', {
       method: 'GET',
       credentials: 'include',
     }).then((data) => {
