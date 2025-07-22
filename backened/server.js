@@ -120,7 +120,7 @@ console.log("token-"+token)
 res.cookie('token', token, {
   httpOnly: false,         // allow JS to access (optional)
   secure: true,           // must be true if you're on HTTPS
-  sameSite: 'none',         // controls cross-origin cookie behavior
+  sameSite: 'lax',         // controls cross-origin cookie behavior
   path: '/',               // cookie available to all paths
   maxAge: 86400000         // 1 day
 });
@@ -167,7 +167,7 @@ console.log("token-"+token)
 res.cookie('token', token, {
   httpOnly: false,         // allow JS to access (optional)
   secure: true,           // must be true if you're on HTTPS
-  sameSite: 'none',         // controls cross-origin cookie behavior
+  sameSite: 'lax',         // controls cross-origin cookie behavior
   path: '/',               // cookie available to all paths
   maxAge: 86400000         // 1 day
 });
