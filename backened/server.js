@@ -87,6 +87,7 @@ app.get('/log-out', (req, res) => {
   sameSite: 'lax',
     path: '/',
 });
+   res.setHeader('Set-Cookie', 'token=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0');
 res.json({ message: 'Logged out successfully' });
 });
 
