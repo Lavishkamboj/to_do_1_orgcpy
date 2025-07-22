@@ -82,8 +82,8 @@ res.status(200).json(user_data)
 })
 app.get('/log-out', (req, res) => {
   res.clearCookie('token', {
-  httpOnly: true,
-  secure: false,
+  httpOnly: false,
+  secure: true,
   sameSite: 'lax',
     path: '/',
 });
@@ -118,7 +118,7 @@ console.log("token-"+token)
 
 //cookie
 res.cookie('token', token, {
-  httpOnly: true,         // allow JS to access (optional)
+  httpOnly: false,         // allow JS to access (optional)
   secure: true,           // must be true if you're on HTTPS
   sameSite: 'none',         // controls cross-origin cookie behavior
   path: '/',               // cookie available to all paths
@@ -165,7 +165,7 @@ console.log("token-"+token)
 
 //cookie
 res.cookie('token', token, {
-  httpOnly: true,         // allow JS to access (optional)
+  httpOnly: false,         // allow JS to access (optional)
   secure: true,           // must be true if you're on HTTPS
   sameSite: 'none',         // controls cross-origin cookie behavior
   path: '/',               // cookie available to all paths
